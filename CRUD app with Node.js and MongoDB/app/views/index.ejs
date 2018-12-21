@@ -6,26 +6,43 @@
     <title>CRUD em Node-JS e MongoDB</title>
     
     <!-- JQuery -->
-    <script src="js/jquery-2.2.1.js"></script>
+    <script type="text/javascript" src="js/jquery-2.2.1.js"></script>
 
     <!-- bootstrap - link cdn -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <script type="text/javascript" src="js/script.js"></script>
   
     <!-- incluindo css -->
     <link href="css/style.css" rel="stylesheet">
 
     <!-- favicon -->
     <link rel="shortcut icon" href="images/favicon.ico" />
+
   </head>
 
   <body>
 
-<h2>CRUD em NODE JS desenvolvido por <a href="https://www.linkedin.com/in/guilherme-bitencurt" target="_blank">Guilherme Bitencurt</a></h2>
+<div style="margin:0 auto;width:800px;">
 
-<ul>
-    <li><span class="glyphicon glyphicon-user"></span> <a href="/listagem">Lista de Usuários Cadastrados</a></li>
-    <li><span class="glyphicon glyphicon-save"></span> <a href="/cadastro">Cadastrar Novos Usuários</a></li>
-</ul>
+<h4>CRUD em NODE JS e MongoDB(V 1.0) desenvolvido por <a href="https://www.linkedin.com/in/guilherme-bitencurt" target="_blank" style="color:#01579b;">Guilherme Bitencurt</a></h4>
+
+<nav class="navbar" id="menu_principal">
+  <a href="#"><span class="navbar-brand" id="menu_home"><span class="glyphicon glyphicon-home"></span></a></span>
+  <a href="/listagem"><span class="navbar-brand"><span class="glyphicon glyphicon-user"></span> Usuários Cadastrados</a></span>
+  <a href="/cadastro"><span class="navbar-brand"><span class="glyphicon glyphicon-save"></span> Cadastrar Novos Usuários</a></span>
+  <a href="#" id="btn_info_crud"><span class="navbar-brand"><span class="glyphicon glyphicon-info-sign"></span> O que é CRUD?</a></span>
+</nav>
+
+<div id="info_crud">
+
+<p>“<em><b>CRUD</b></em> é o acrônimo da expressão do idioma Inglês, <b>C</b>reate (Criação), <b>R</b>ead (Consulta), <b>U</b>pdate (Atualização) e <b>D</b>elete (Destruição). Este acrônimo é comumente utilizado para definir as quatro operações básicas usadas em Banco de Dados Relacionais.”
+ 
+</p>
+
+</div>
+
+</div>
   
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   
