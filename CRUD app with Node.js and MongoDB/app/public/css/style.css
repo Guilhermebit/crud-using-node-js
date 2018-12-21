@@ -1,0 +1,66 @@
+
+/* geral */
+
+ul li {
+
+	list-style-type: none;
+	font-size: 20px;
+}
+
+/* tabelas */
+
+table {
+
+	font-size: 20px;
+
+}
+
+table thead {
+
+	background-color: #000;
+	color: #fff;
+}
+
+table td {
+
+	padding: 5px;
+}
+
+/* alertas */
+
+#msg_edicao_ok {
+
+    width: 350px;
+    font-size:15px;
+
+}
+
+#msg_exclusao_ok {
+
+    width: 350px;
+    font-size:15px;
+
+}
+
+/* listagem usuarios*/
+
+#listagem_usuarios {
+
+	width: 500px;
+    margin: 0 auto;
+
+}
+
+/* images */
+
+#image_add_user {
+
+	width: 50px;
+	height: 50px;
+}
+
+#image_users_list {
+
+	width: 50px;
+	height: 50px;
+}

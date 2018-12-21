@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+
+    <title>CRUD em Node-JS e MongoDB</title>
+    
+    <!-- JQuery -->
+    <script src="js/jquery-2.2.1.js"></script>
+
+    <!-- bootstrap - link cdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  
+    <!-- incluindo css -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" />
+  </head>
+
+  <body>
+
+     <div class="container">
+
+      <div class="row" id="listagem_usuarios">
+        
+       <div class="col-md-12">
+
+        <h2><img src="images/lista_users.png" id="image_users_list">Usuários Cadastrados:</h2>
+
+        <% if(msgEdicao == 'edicao_ok') { %>
+            <div class="alert alert-success" id="msg_edicao_ok">
+                <strong>Usuário editado com sucesso <span class="glyphicon glyphicon-ok"></span></strong>
+            </div>
+        <% } %>
+
+          <% if(msgDelete == 'delete_ok') { %>
+            <div class="alert alert-success" id="msg_exclusao_ok">
+                <strong>Usuário excluído com sucesso <span class="glyphicon glyphicon-ok"></span></strong>
+            </div>
+        <% } %>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <td>Nome</td>
+                <td>Sobrenome</td>
+                <td>Ação</td>
+            </tr>
+        </thead>
+        <tbody>
+        <% usuarios.forEach(function(detalhes) { %>
+            <tr>
+                <td><%= detalhes.nome %></td>
+                <td><%= detalhes.sobrenome %></td>
+                <td><a href="/editar/<%= detalhes._id %>">Editar</a> - <a href="/remover?id=<%= detalhes._id %>">Excluir</a></td>
+            </tr>
+            <% }) %>
+        </tbody>
+        </table>
+
+        <br>
+        <button><a href="/">Voltar</a></button>
+
+        </div>
+
+        </div>
+        
+        </div>
+
+  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  
+  </body>
+</html>
