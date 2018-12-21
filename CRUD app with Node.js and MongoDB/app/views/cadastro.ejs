@@ -37,33 +37,32 @@
           </div>
         </div>
       </div>
-       <% } else %>
+       <% } %>
   
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-sm-4 col-sm-offset-4" style="background-color: #08b2c1; color: #fff;margin-top: 10px;padding:20px;">
 
-          <h2><img src="images/add_new_user.png" id="image_add_user">Cadastrar Um Novo Usuário:</h2>
+          <h2 style="font-size:20px;"><img src="images/add_new_user.png" id="image_add_user">Cadastrar Novo Usuário:</h2>
 
             <form action="/cadastrar" method="post">
             <div class="form-group">
-              <label for="titulo">* Nome:</label>
+              <label for="titulo"><span class="asterisco_req">*</span> Nome:</label>
               <input type="text" class="form-control" value="<%=dadosForm.nome%>" id="nome" name="nome">
             </div>
 
             <div class="form-group">
-              <label for="pwd">* Sobrenome:</label>
+              <label for="pwd"><span class="asterisco_req">*</span> Sobrenome:</label>
               <input type="text" class="form-control" value="<%=dadosForm.sobrenome%>" id="sobrenome" name="sobrenome">
             </div>
 
-            <button type="submit" class="btn btn-default">Cadastrar</button>
+            <button type="submit" class="btn btn-primary" title="Cadastrar">Cadastrar</button>
             </form>
+
+             <br>
+           <button><a href="/">Voltar</a></button>
 
           </div>
         </div>
-
-         <br>
-        <button><a href="/">Voltar</a></button>
-
       </div>
   
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
