@@ -20,30 +20,33 @@
 
   <body>
 
+
      <div class="container">
 
       <div class="row">
         
-       <div class="col-md-12">
+       <div class="col-sm-4 col-sm-offset-4" id="form_editar" style="background-color: #08b2c1; color: #fff;margin-top: 10px;padding:20px;">
 
-        <h2>Editar Usuário:</h2>
+        <h2 style="font-size:20px;">Editar Usuário:</h2>
 
   <% usuarios.forEach(function(detalhes) { %>
    <form action="/editar/salvar_edicao/<%= detalhes._id%>" method="post">
        
     <div class="form-group">
-       <label for="nome">Nome:</label>
+       <label for="nome"><span class="asterisco_req">*</span> Nome:</label>
        <input type="text" class="form-control" value="<%= detalhes.nome %>" name="nome">
     </div>
     <div class="form-group">
-       <label>Sobrenome:</label>
+       <label><span class="asterisco_req">*</span> Sobrenome:</label>
        <input type="text" class="form-control" value="<%= detalhes.sobrenome %>" name="sobrenome">
     </div>
 
-       <br><br>
-       <button><a href="/listagem">Listar Usuarios</a></button>
-       <button type="submit">Salvar Edição</button>
+       <br>
+       <button type="submit" class="btn btn-success" title="Editar Dados">Salvar Edição</button>
    </form>
+
+      <br>
+   <button><a href="/listagem">Listar Usuarios</a></button>
   
     <% }) %>
 
@@ -51,6 +54,7 @@
 
     </div>
      </div>
+    
 
   
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
