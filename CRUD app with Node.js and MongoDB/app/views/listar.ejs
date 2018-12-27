@@ -49,7 +49,10 @@
             </tr>
         </thead>
         <tbody>
+       <%  var qtd = 0; %>
+
         <% usuarios.forEach(function(detalhes) { %>
+            <% qtd++; %>
             <tr>
                 <td><%= detalhes.nome %></td>
                 <td><%= detalhes.sobrenome %></td>
@@ -58,7 +61,7 @@
             <% }) %>
         </tbody>
         </table>
-
+        <h3>Total de Usuários: <strong><%=qtd%></strong></h3>
         <br>
         <button><a href="/">Voltar</a></button>
 
